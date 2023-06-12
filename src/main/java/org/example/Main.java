@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -10,6 +11,9 @@ public class Main {
         ChromeOptions  options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         WebDriver webDriver = new ChromeDriver(options);
-        webDriver.get("https://www.google.com");
+        webDriver.get("https://www.w3schools.com/xml/xpath_syntax.asp");
+        //*[@id="accept-choices"]
+        webDriver.findElement(By.xpath("//*[@id=\"accept-choices\"]")).click();
+
     }
 }
